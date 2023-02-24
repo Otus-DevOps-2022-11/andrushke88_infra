@@ -5,6 +5,8 @@ sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates
 sudo apt-get update
 sudo apt-get install -y mongodb-org
-sleep 45
+sleep 30
+/etc/init.d/mongod start
+/etc/init.d/mongod enable
 systemctl start mongod
 systemctl enable mongod
