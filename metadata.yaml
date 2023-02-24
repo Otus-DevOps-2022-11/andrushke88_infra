@@ -15,9 +15,8 @@ runcmd:
   - apt-get install -y apt-transport-https ca-certificates dpkg mongodb-org
   - systemctl enable mongod
   - systemctl start mongod
-  - echo "mongo!-----------------------------------------------------------------------mongo!"
+  - systemctl status mongod
   - apt-get install -y ruby-full ruby-bundler build-essential git
   - git clone -b monolith https://github.com/express42/reddit.git
   - cd reddit && bundle install
   - puma -d
-  
