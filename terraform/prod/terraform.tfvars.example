@@ -1,0 +1,8 @@
+cloud_id = "MYCLOUDID"
+folder_id = "MYFOLDERID"
+zone = "ru-central1-a"
+image_id = "MYPACKERIMAGE"
+public_key_path = "~/.ssh/yc1.pub"
+subnet_id = "MYSUBNET"
+service_account_key_file = "key.json"
+private_key_path = "~/.ssh/yc1"
