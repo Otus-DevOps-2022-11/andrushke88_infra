@@ -1,0 +1,24 @@
+{
+    "builders": [
+        {
+            "type": "yandex",
+            "service_account_key_file": "{{user `key`}}",
+            "folder_id": "{{user `folder_id`}}",
+            "source_image_family": "{{user `image`}}",
+            "image_name": "reddit-db-base-{{timestamp}}",
+            "image_family": "reddit-db-base",
+            "ssh_username": "{{user `ssh_username`}}",
+            "platform_id": "standard-v1",
+			"use_ipv4_nat": "true"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "ansible",
+            "user": "ubuntu",
+            "playbook_file": "ansible/playbooks/packer_db.yml",
+			"extra_arguments": ["--tags", "installmongo"],
+            "ansible_env_vars": ["ANSIBLE_ROLES_PATH=ansible/roles"]
+        }
+    ]
+}
