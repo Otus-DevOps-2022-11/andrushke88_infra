@@ -1,6 +1,21 @@
+/.epicyc
 /packer/variables.json
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
+yc1
+yc1.pub
+main.tf.old
+*.tmp
+*.retry
+jdauphant.nginx
+vault.key
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache

@@ -4,6 +4,7 @@
             "type": "yandex",
             "service_account_key_file": "{{ user `key` }}",
             "folder_id": "{{ user `folder_id`}}",
+            "subnet_id": "e9boi8i3i41qeriucoqm",
             "zone":      "ru-central1-a",
             "use_ipv4_nat":        true,
             "image_description": "packer hw",
@@ -14,17 +15,11 @@
             "disk_type": "network-hdd",
             "platform_id": "standard-v1"
         }
-
-    ],
+   ],
     "provisioners": [
         {
             "type": "shell",
             "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}"
-        },
-        {
-            "type": "shell",
-            "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
         }
     ]
