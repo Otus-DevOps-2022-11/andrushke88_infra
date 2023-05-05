@@ -1,0 +1,4 @@
+[app-stage]
+appserver ansible_host=62.84.115.34
+[db-stage]
+dbserver ansible_host=84.252.129.101
