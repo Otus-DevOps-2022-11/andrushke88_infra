@@ -2,7 +2,7 @@
     "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "{{ user `key` }}",
+            "service_account_key_file": "{{ user `key_file` }}",
             "folder_id": "{{ user `folder_id`}}",
             "zone":      "ru-central1-a",
             "use_ipv4_nat":        true,
@@ -19,7 +19,7 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "scripts/install_ruby.sh",
+            "script": "packer/scripts/install_ruby.sh",
             "execute_command": "sudo {{.Path}}"
         },
         {

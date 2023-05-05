@@ -2,10 +2,10 @@
     "_meta": {
         "hostvars": {
             "app-stage-server": {
-                "ansible_host": "62.84.115.34"
+                "ansible_host": "62.84.115.186"
             },
             "db-stage-server": {
-                "ansible_host": "84.252.129.101"
+                "ansible_host": "62.84.116.86"
             }
         }
     },
